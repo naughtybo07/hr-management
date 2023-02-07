@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 50px;
+            border: 1.5px solid black;
+            border-radius: 20px;
+        }
+        .back{
+            border-radius: 15px;
+            border: 2px solid black;
+            text-align: center;
+            margin-left: 1050px;
+            margin-right: 50px;
+        }
+    
+        body{
+            background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    
+        }
+        .div1{
+            text-align: center;
+            border: 2px solid black;
+            margin-left: 400px;
+            width: 400px;
+            height: 380px;
+            margin-top: 50px;
+        }
+        .link{
+            margin-top: 20px;
+            background-color: #FFBBEC;
+            border-radius: 15px;
+            border: 1.5px solid black;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        input[type=date]{
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .div{
+            margin-top: 15px;
+            border-radius: 10px;
+        }
+    </style> 
+</head>
+<body>
+    <h1>EMPLOYEE REGISTER</h1>
+    <div class="back">
+        <a href="login">Back</a>
+    </div>
+    <div class="div1">
+    {% load static %}
+    <form method="post">
+        {% csrf_token %}
+        <div class="div"><input type="text" placeholder="Enter your name" name="name"><br></div>
+        <div class="div"><input type="text" placeholder="Enter your employee code" name="emp_code"><br></div>
+        <div class="div"><input type="text" placeholder="Enter your address" name="address"><br></div>
+        <div class="div"><input type="email" placeholder="Enter your email" name="email"><br></div>
+        <div class="div"><input type="number" placeholder="Enter your phnum" name="phnum"><br></div>
+        <div class="div"><input type="date" placeholder="Enter your phnum" name="date"><br></div>
+        <div class="div"><input type="text" placeholder="Enter your skills" name="skill"><br></div>
+        <div class="div"><input type="password" placeholder="Enter your password" name="password"><br></div>
+        <div class="div"><input type="password" placeholder="Re-Enter your password" name="password1"><br></div>
+        <div class="div"><input type = "submit" value="REGISTER"><br></div>
+    </form>
+    {{mgs}}<br>
+    {{mgs1}}
+</div>
+</body>
+</html>

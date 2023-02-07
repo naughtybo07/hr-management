@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+        .div1{
+            margin-left: 50px;
+        }
+        input[type=submit],[type=text]{
+            background-color: #A9C9FF;
+            border: 1.5px solid black;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-radius: 5px;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 50px;
+            border: 1.5px solid black;
+            border-radius: 20px;
+        }
+        .back{
+            border-radius: 15px;
+            border: 2px solid black;
+            text-align: center;
+            margin-left: 1050px;
+            margin-right: 50px;
+            margin-top: 10px;
+        }
+    
+        body{
+            background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    
+        }
+        .center{
+            width: 400px;
+            text-align: center;
+            margin-top: 20px;
+            height:200px;
+            margin-left: 300px;
+            border: 2px solid black;
+            padding-top: 50px;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    
+        <h1>SEARCH EMPLOYEE</h1>
+    <div class="div1">
+        <form method="post">
+            {%csrf_token%}
+            <input type="text" placeholder="Enter your the employcode" name="code">
+            <input type="submit" name="submit" value="SUBMIT">
+        </form>
+    </div>
+    
+    <div class="back">
+        <a href="manager_main">Back</a>
+    </div>
+    {% for i in data%}
+    <div class="center">
+
+        <label> NAME  : </label>{{i.username}}<br>
+        <label for="">EMPLOYEE CODE  : </label>{{i.admin_code}}<br>
+        <label for="">ADDRESS  : </label>{{i.address}}<br>
+        <label for="">PHONE  : </label>{{i.phnum}}<br>
+        <label for="">SKILLS  : </label>{{i.skill}}<br>
+        <label for="">SCORE  : </label>{{i.score}}<br>
+        <label for="">EMAIL  : </label>{{i.email}}<br>
+       
+    </div>
+    {%endfor%}
+
+</body>
+</html>

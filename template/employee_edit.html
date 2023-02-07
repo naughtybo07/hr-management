@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 50px;
+            border: 1.5px solid black;
+            border-radius: 20px;
+        }
+        .back{
+            border-radius: 15px;
+            border: 2px solid black;
+            text-align: center;
+            margin-left: 1050px;
+            margin-right: 50px;
+        }
+        .div{
+            text-align: center;
+            border: 2px solid black;
+            margin-left: 400px;
+            width: 400px;
+            height: 350px;
+            margin-top: 50px;
+        }
+        body{
+            background-color: #A9C9FF;
+background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+
+        }
+        .name{
+            margin-top: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>EDIT EMPLOYEE</h1>
+
+    <div class="back">
+        <a href="employ_main">Back</a>
+    </div>
+    
+
+    <div class="div">
+    <form method="post">
+        {%csrf_token%}
+        <label for="name">NAME</label>
+        <input type="text" name="name" placeholder="Enter your name" value="{{data.username}}" class="name" required><br>
+        <label for="emp_code">EMPLOYEE CODE</label>
+        <input type="text" name="emp_code" placeholder="Enter your Employee code" value="{{data.admin_code}}" class="name" readonly><br>
+        <label for="join_date">JOINING DATE</label>
+        <input type="text" name="join_date" placeholder="Enter your joining date" value="{{data.join_date}}" class="name" readonly><br>
+        <label for="address">ADDRESS</label>
+        <input type="text" name="address" placeholder="Enter your address" value="{{data.address}}" class="name" required><br>
+        <label for="skill">SKILLS</label>
+        <input type="text" name="skill" placeholder="Enter your skill" value="{{data.skill}}" class="name" required><br>
+        <label for="phnum">PHONE NUMBER</label>
+        <input type="number" name="phnum" placeholder="Enter your phone number" value="{{data.phnum}}" class="name" required><br>
+        <label for="email">EMAIL</label>
+        <input type="email" name="email" placeholder="Enter your email" value="{{data.email}}" class="name" required><br>
+        <label for="password">PASSWORD</label>
+        <input type="password" name="password" placeholder="Enter your password" value="{{data.password}}" class="name" required><br><br>
+        <input type="submit" value="SAVE EDIT"><br>
+        {{mgs}}
+    </form>
+</div>
+
+
+</body>
+</html>

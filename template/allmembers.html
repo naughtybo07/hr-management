@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 50px;
+            border: 1.5px solid black;
+            border-radius: 20px;
+        }
+        .back{
+            border-radius: 15px;
+            border: 2px solid black;
+            text-align: center;
+            margin-left: 1050px;
+            margin-right: 50px;
+            margin-top: 0px;
+        }
+    
+        body{
+            background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    
+        }
+        .dic{
+            width: 400px;
+            text-align: center;
+            margin-top: 20px;
+            height:200px;
+            margin-left: 350px;
+            border: 2px solid black;
+            padding-top: 50px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ALL USERS</h1>
+<div class="back">
+    <a href="admin_main">BACK</a>
+</div>
+
+    {% for i in data1 %}
+    <div class="dic">
+    USERNAME : {{i.username}}<br>
+    USERCODE : {{i.admin_code}}<br>
+    ADDRESS : {{i.address}}<br>
+    PHNUM : {{i.phnum}}<br>
+    EMAIL :{{i.email}}<br>
+</div>
+    {%endfor%}
+    {% for i in data2 %}
+    <div class="dic">
+    USERNAME : {{i.username}}<br>
+    USERCODE : {{i.hr_code}}<br>
+    ADDRESS : {{i.address}}<br>
+    PHNUM : {{i.phnum}}<br>
+    EMAIL :{{i.email}}<br>
+</div>
+    {%endfor%}
+    {% for i in data3 %}
+    <div class="dic">
+    USERNAME : {{i.username}}<br>
+    USERCODE : {{i.manager_code}}<br>
+    ADDRESS : {{i.address}}<br>
+    PHNUM : {{i.phnum}}<br>
+    EMAIL :{{i.email}}<br>
+</div>
+    {%endfor%}
+    <div class="div">
+        {{list1}}
+    </div>
+</body>
+</html>

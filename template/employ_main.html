@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 50px;
+            border: 1.5px solid black;
+            border-radius: 20px;
+        }
+        body{
+            background-color: #A9C9FF;
+background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+background-repeat: no-repeat;
+        }
+        a{
+            text-decoration: none;
+            
+
+        }
+        .right{
+            width: 200px;
+            height: 400px;
+            margin-left: 100px;
+            margin-top: 80px;
+            border-radius: 10px;
+            border: 2px solid black;
+            text-align: center;
+            padding-top: 50px;
+
+        }
+        .text{
+            margin-top: 20px;
+            background-color: #FFBBEC;
+            border-radius: 15px;
+            border: 1.5px solid black;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .container{
+            display: flex;
+        }
+        img{
+            height: 250px;
+            width: 250px;
+            border-radius: 15px;
+            border: 2px solid black;
+            margin-top: 150px;
+            margin-left: 300px ;
+        }
+        h3{
+            margin-left: 370px;
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+    <h1> SEIMEN - EMPLOYEE </h1>
+    <div class="container">
+        <div class="right">
+            <div class="text"><a href="edit_employ">EDIT DATA</a></div>
+            <div class="text"><a href="requestleave">LEAVE</a></div>   
+            <div class="text"><a href="sendreport">SEND REPORT</a></div>         
+            <div class="text"><a href="login"> LOGOUT</a></div>
+        </div>
+        <div class="left">
+            <img src="{% static 'image\eee.png' %}" alt=""><br>
+            
+
+        </div>
+    </div>
+
+</body>
+</html>

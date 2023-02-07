@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+        .div1{
+            margin-top: 10px;
+        }
+        input[type=submit]{
+            background-color: #A9C9FF;
+            border: 1.5px solid black;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            border-radius: 5px;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 50px;
+            border: 1.5px solid black;
+            border-radius: 20px;
+        }
+        .back{
+            border-radius: 15px;
+            border: 2px solid black;
+            text-align: center;
+            margin-left: 1050px;
+            margin-right: 50px;
+            margin-top: 0px;
+        }
+    
+        body{
+            background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    
+        }
+        .center{
+            width: 400px;
+            text-align: center;
+            margin-top: 20px;
+            height:200px;
+            margin-left: 350px;
+            border: 2px solid black;
+            padding-top: 50px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>REQUEST LEAVE</h1>
+    <div class="back">
+        <a href="employ_main">BACK</a>
+    </div>
+    <div class="center">
+    <form action="" method="post">
+        {%csrf_token%}
+        <div class="div1"><input type="text" placeholder="Enter your Name" class="name" name="name"><br></div>
+        <div class="div1"><input type="text" placeholder="Enter your employ code" class="name" name="emp_code" ><br></div>
+        <div class="div1"><input type="text" placeholder="Enter your reason" class="name" name="reason" ><br></div>
+        <div class="div1"><input type="number" placeholder="How many days" class="name" name="day" ><br></div>
+        <div class="div1"><input type="submit" value="send" class="name" ><br></div>
+    </form>
+</div>
+</body>
+</html>

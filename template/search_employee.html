@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="back">
+        <a href="employ_main">Back</a>
+    </div>
+    <form method="post">
+        {%csrf_token%}
+        <input type="text" placeholder="Enter your name or employcode" name="code">
+        <input type="submit" name="submit" value="SUBMIT">
+    </form>
+    {% for i in data %}
+    <label> NAME  : </label>{{i.username}}<br>
+    <label for="">EMPLOYEE CODE  : </label>{{i.admin_code}}<br>
+    <label for="">ADDRESS  : </label>{{i.address}}<br>
+    <label for="">PHONE  : </label>{{i.phnum}}<br>
+    <label for="">SKILLS  : </label>{{i.skill}}<br>
+    <label for="">SCORE  : </label>{{i.score}}<br>
+    <label for="">EMAIL  : </label>{{i.email}}<br>
+    {%endfor%}
+</body>
+</html>

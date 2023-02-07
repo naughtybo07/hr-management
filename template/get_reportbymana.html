@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 50px;
+            border: 1.5px solid black;
+            border-radius: 20px;
+        }
+        .back{
+            border-radius: 15px;
+            border: 2px solid black;
+            text-align: center;
+            margin-left: 1050px;
+            margin-right: 50px;
+            margin-top: 0px;
+        }
+    
+        body{
+            background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    
+        }
+        .div{
+            width: 400px;
+            text-align: center;
+            margin-top: 20px;
+            height:200px;
+            margin-left: 350px;
+            border: 2px solid black;
+            padding-top: 50px;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>REPORTS</h1>
+    <div class="back">
+        <a href="manager_main">Back</a>
+    </div>
+    {% for i in data%}
+    <div class="div">
+    <form method="post">
+        {%csrf_token%}
+        <label>Employee name :</label>{{i.username}}<br>
+        <label>Employee code  :</label>{{i.usercode}}<br>
+        <label>Project name  :</label>{{i.project_name}}<br>
+        <label>Project progress  :</label>{{i.project_progress}}<br>
+        <label>Start date  :</label>{{i.project_date}}<br>
+        <label>End date  :</label>{{i.end_date}}<br>
+    </form>
+</div>
+    {%endfor%}
+</body>
+</html>

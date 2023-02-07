@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+        .div1{
+            margin-left: 50px;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 50px;
+            border: 1.5px solid black;
+            border-radius: 20px;
+        }
+        .back{
+            border-radius: 15px;
+            border: 2px solid black;
+            text-align: center;
+            margin-left: 1050px;
+            margin-right: 50px;
+            margin-top: 15px;
+        }
+    
+        body{
+            background-color: #A9C9FF;
+    background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+    
+        }
+        .center{
+            width: 400px;
+            text-align: center;
+            margin-top: 10px;
+            height:350px;
+            margin-left: 300px;
+            border: 2px solid black;
+            padding-top: 50px;
+            border-radius: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>SEND REPORT</h1>
+    <div class="back">
+        <a href="employ_main">Back</a>
+    </div>
+    <div class="center">
+    <form method="post">
+        {% csrf_token%}
+        <label for="name">EMPLOYEE NAME :</label>
+        <input type="text" placeholder="Enter your name" name="name"><br><br>
+        <label for="emp_code">EMPLOYEE CODE :</label>
+        <input type="text" placeholder="Enter your employee code" name="emp_code"><br><br>
+        <label for="pro_name">PROJECT NAME :</label>
+        <input type="text" placeholder="Enter your project name" name="pro_name"><br><br>
+        <label for="pro_progress">PROJECT PROGRESS :</label>
+        <input type="text" placeholder="Enter your project progress" name="pro_progress"><br><br>
+        <label for="start_date">PROJECT-START :</label>
+        <input type="date" placeholder="Enter project start date" name="start_date"><br><br>
+        <label for="end_date">PROJECT-END :</label>
+        <input type="date" placeholder="Enter project end date" name="end_date"><br><br>
+        <input type="submit" value="SENT">  <br><br>
+    </form>
+    {{mgs}}
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            text-transform: capitalize;
+        }
+        body{
+            background-repeat: no-repeat;
+            background-size: 1300px;
+            background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);            
+        }
+        form{
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 10px;
+            height: 350px;
+            margin-left: 150px;
+            margin-right: 350px;
+            border-radius: 10px;
+            padding-top: 50px ;
+        }
+        input{
+        
+            text-align: center;
+            border-radius: 10px;
+            height: 30px;
+            width: 200px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"]{
+            border-radius: 10px;
+            height: 30px;
+            width: 150px;
+        }
+        h1{
+            color: rgb(0, 0, 0);
+            text-align: center;
+            height: 50px;
+            border: 1.5px solid black;
+            border-radius: 20px;
+
+        }
+        input:hover{
+            background-color: rgba(2, 38, 72, 0.797);
+            color: azure;
+        }
+        .box{
+            
+            height: 500px;
+        
+        }
+        img{
+            width: 150px;
+            height: 150px;
+        }
+        .container{
+            
+            display: flex;
+        }
+        .div{
+            margin-top: 150px;
+            margin-left: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    {% load static %}
+    <h1>LOGIN</h1>
+    <div class="container">
+        <div class="div">
+            <img src="{% static 'image/log.png' %}">
+        </div>
+        <div class="div2">
+        <form method ="post">
+    
+            {% csrf_token %}
+            <input type="text" placeholder="Enter your name" name="name"><br>
+            <input type="text" placeholder="Enter your admin code" name="ad_code"><br>
+            <input type="password" placeholder="Enter your password" name="password"><br>
+            <input type="submit" value="LOGIN"><br>
+            {{mgs}}
+        </form>
+    </div>
+    </div>
+
+</body>
+</html>
